@@ -1,0 +1,41 @@
+.content {
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cuadro {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 90%;
+    background-color: #6A73FF;
+    border-radius: 20px;
+    overflow: hidden;
+    border: #31323E solid;
+    border-width: 1px;
+
+}
+
+.imagen{
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    background-image: url('../assets/default.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
