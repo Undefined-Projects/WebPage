@@ -1,11 +1,13 @@
-import Title from './Title.tsx'
+import Hero from '../components/Hero.tsx'
+import Navbar from '../components/Navbar.tsx'
 
 function App() {
   
 
   return (
     <>
-      <Title/>
+      <Navbar/>
+      <Hero/>
     </>
   )
 }

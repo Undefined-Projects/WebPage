@@ -1,0 +1,454 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------------- CHRIS SECTION ------------------ */
+
+.hero {
+  height: 100dvh; 
+  width: 100dvw; 
+  position: relative;
+  color: white;
+  font-family: "SilkScreen";
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.heroBackgroundContainer {
+  width: 100%; 
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  z-index: -1;
+}
+
+.heroBackgroundImg {
+  object-fit: cover; 
+  width: 100%; 
+  height: 100%;
+}
+
+.heroTextContainer {
+  padding-left: 150px;
+  padding-bottom: 150px;
+  z-index: 2;
+}
+
+.heroTitle {
+  font-size: 60px;
+  font-weight: 500;
+  background: linear-gradient(to top, #9e9e9e, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroParagraph {
+  font-size: 26px;
+  font-weight: 400;
+  background: linear-gradient(to top, #9e9e9e, #ffffff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.heroCTAContainer {
+  margin-top: 32px;
+  display: flex;
+  gap: 12px;
+  margin-top: 30px;
+  }
+
+@media screen and (max-width: 768px) {
+  .heroTitle {
+    font-size: 35px;
+  }
+  .heroParagraph {
+    font-size: 20px;
+  }
+  .heroTextContainer {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .heroCTAContainer {
+    display: flex;
+    gap: 12px;
+    margin-top: 2px;
+  }
+  .heroBackgroundImg {
+    height: 100%;
+  }
+}
+
+.heroCTA, .heroSecondaryCTA {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 24px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.5px;
+  height: 44px;
+}
+
+.heroCTA {
+  background-color: #6a73ff;
+  background-image: 
+    linear-gradient(270deg, rgba(106, 115, 255, 0) 27.36%, rgba(106, 115, 255, 0.15) 62.26%),
+    linear-gradient(289.21deg, rgba(0, 0, 0, 0.37) 4.22%, rgba(106, 115, 255, 0.37) 92.19%);
+  border: none;
+  color: #e1e2ed;
+  box-shadow: 0px 4px 15px rgba(106, 115, 255, 0.35);
+}
+
+.heroCTA:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 8px 25px rgba(106, 115, 255, 0.5);
+  background-color: #7c85ff;
+}
+
+.heroCTA:active {
+  transform: translateY(0);
+}
+
+.heroCTAIcon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.3s ease;
+}
+
+.heroSecondaryCTA {
+  background: transparent;
+  border: 1px solid rgba(106, 115, 255, 0.5);
+  color: #e1e2ed;
+  backdrop-filter: blur(10px);
+}
+
+.heroSecondaryCTA:hover {
+  background: rgba(106, 115, 255, 0.1);
+  border-color: #6a73ff;
+  box-shadow: 0px 4px 15px rgba(106, 115, 255, 0.2);
+  transform: translateY(-2px);
+}
+
+.heroSecondaryCTA:active {
+  transform: translateY(0);
+}
+
+/* ------------------------- CHRIS SECTION ------------------ */
+
+.navbar {
+  position: fixed;
+  top:0;
+  z-index: 10000;
+  width: 100dvw;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+}
+
+.navbarLogo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logoText {
+  font-family: "SilkScreen";
+  font-size: 20px;
+  color:#e1e2ed;
+}
+
+.navbar > .buttons {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.buttons > button {
+  position: relative;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  font-family: "Inter";
+  font-size: 14px;
+  cursor: pointer;
+  color:white;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.buttons > button:not(.LoginButton)::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 6px;
+  width: 0;
+  height: 2px;
+  background-color: currentColor;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.buttons > button:hover::after {
+  width: calc(100% - 40px);
+}
+
+.LoginButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: all ease 250ms;
+  color:black;
+  border: 1px solid #4b53c9 !important;
+  border-radius: 10px;
+  background-image: linear-gradient(to left top, rgb(69, 74, 151), #6A73FF);
+}
+
+.LoginButton:hover {
+  background-color: #7c85ff;
+}
+
+
+@media (max-width: 900px) {
+  .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar > .buttons {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 280px;
+    height: 100vh;
+    background: rgba(13, 14, 25, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 10001;
+    padding: 40px;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .navbar > .buttons.open {
+    right: 0;
+  }
+
+  .buttons > button {
+    font-size: 18px;
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+  }
+
+  .buttons > button::after {
+    left: 0;
+    transform: none;
+    bottom: 0;
+  }
+
+  .buttons > button:hover::after {
+    width: 100%;
+  }
+
+  .logoText {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    display: flex !important;
+  }
+
+  .nav-novedades {
+    height: 40px !important;
+    width: 100%;
+    justify-content: flex-start !important;
+    padding: 0 20px !important;
+  }
+
+  .nav-novedades .novedades-button__text {
+    font-size: 16px !important;
+  }
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 10002;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hamburger.open span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(4px);
+  z-index: 10000;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.nav-novedades {
+  background: rgba(106, 115, 255, 0.1) !important;
+  border: 1px solid rgba(106, 115, 255, 0.2) !important;
+}
+
+.nav-novedades:hover {
+  background: rgba(106, 115, 255, 0.2) !important;
+}
+
+/* ------------------------- NOVEDADES BUTTON ------------------ */
+
+.novedades-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-radius: 26px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    inset 0 1px 1px 0 rgba(255, 255, 255, 0.1),
+    0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0 14px;
+  height: 26px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+  outline: none;
+  text-decoration: none;
+  
+  /* Initial Animation */
+  opacity: 0;
+  transform: translateY(10px) scale(0.98);
+  animation: novedadesReveal 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes novedadesReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.novedades-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  animation: novedadesShimmer 3s infinite 1s;
+}
+
+@keyframes novedadesShimmer {
+  0% {
+    left: -100%;
+  }
+  20%, 100% {
+    left: 200%;
+  }
+}
+
+
+.novedades-button__stars {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 10px;
+  height: 11px;
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.5));
+}
+
+.novedades-button__text {
+  flex-shrink: 0;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  user-select: none;
+}
+
+.novedadesBtn {
+  width: 140px;
+  height: 40px;
+  position: absolute;
+  top: 100px;
+  left: 45%;
+  transform: translateX(-45%);
+}
