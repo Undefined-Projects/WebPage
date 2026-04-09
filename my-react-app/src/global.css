@@ -40,22 +40,27 @@ body {
   padding-left: 150px;
   padding-bottom: 150px;
   z-index: 2;
+  color:#d7d7d7;
 }
 
 .heroTitle {
   font-size: 60px;
   font-weight: 500;
-  background: linear-gradient(to top, #9e9e9e, #ffffff);
+  font-family: "SilkScreen";
+  letter-spacing: 1px;
+  cursor: default;
+  /* background: linear-gradient(to top, #9e9e9e, #ffffff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .heroParagraph {
   font-size: 26px;
   font-weight: 400;
-  background: linear-gradient(to top, #9e9e9e, #ffffff);
+  cursor: default;
+  /* background: linear-gradient(to top, #9e9e9e, #ffffff);
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 .heroCTAContainer {
@@ -171,6 +176,12 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+.navbarLogo a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logoText {
