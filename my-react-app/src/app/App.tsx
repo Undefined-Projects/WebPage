@@ -1,5 +1,5 @@
 import Title from './Title.tsx'
-import NovedadesList from '../components/Novedad.tsx'
+import Carrusel from '../components/Carrusel.tsx'
 
 
 
@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       <Title/>
-      <NovedadesList />
+      <Carrusel />
     </>
   )
 }

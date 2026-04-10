@@ -8,7 +8,7 @@ interface Noticia {
   foto?: string;
 }
 
-function SeccionCarrusel() {
+function Carrusel() {
   const datos: Noticia[] = [
     {
       id: 1,
@@ -55,4 +55,4 @@ function SeccionCarrusel() {
   );
 }
 
-export default SeccionCarrusel;
+export default Carrusel;
