@@ -48,6 +48,12 @@ body{
     margin: 10px;
 }
 
+.swap:hover{
+    background: #31323E;
+    background-color: #00000035;
+    cursor: pointer;
+}
+
 .button-link{
     position: absolute;
     
