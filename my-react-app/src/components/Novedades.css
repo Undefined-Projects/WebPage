@@ -6,18 +6,28 @@ body{
 .content {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 35vw;
     display: flex;
     align-items: center;
     flex-direction: row;
     background-color: #6A73FF;
 }
 
+.contentMobile {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .img{
-    aspect-ratio: 10/10;
     height: 100%;
-    background-size: cover;
-    background-position: center;
+}
+
+.imgMobile{
+    width: 100%;
+    filter: blur(5px);
 }
 
 .texto {
@@ -28,6 +38,13 @@ body{
     height: 100%;
     display: flex;
     justify-content: center;
+    color: white;
+}
+
+.textoMobile {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
     color: white;
 }
 
@@ -59,7 +76,7 @@ body{
     
     background-color: #BFC0D1;
     border-radius: 5rem;
-    padding: 1.25rem 2rem 1.25rem 2rem;
+    padding: 1% 1.5% 1% 1.5%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -67,5 +84,5 @@ body{
     color: black;
     bottom: 0;
     right: 0;
-    margin: 5rem;
+    margin: 7%;
 }

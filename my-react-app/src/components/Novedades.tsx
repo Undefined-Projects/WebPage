@@ -18,8 +18,8 @@ function Novedades({Tittle, Paragraph, Img = Default, onNext, onPrev}: Novedades
     setSrc(Img);
   }, [Img]);
 
-	return (
-		<>
+	function NovedadesWeb () {
+		return (
 			<div className='content'>
 				<div className='button-container'>
 
@@ -47,7 +47,7 @@ function Novedades({Tittle, Paragraph, Img = Default, onNext, onPrev}: Novedades
 						transition={{ duration: 0.3 }}    /* Cuánto dura la animación */
 						className='img'
 						src={src}
-						alt="ImagNovedades"
+						alt=""
 						onError={() => setSrc(Default)}
 					/>
 				</AnimatePresence>
@@ -67,8 +67,36 @@ function Novedades({Tittle, Paragraph, Img = Default, onNext, onPrev}: Novedades
 
 					<a href="#" className='button-link'>Saber más</a>
 			</div>
-		</>
-	);
+	)}
+
+	function NovedadesMobile () {
+		return (
+				<a href='#' className='contentMobile'>
+					<img
+						className='imgMobile'
+						src={src}
+						alt=""
+						onError={() => setSrc(Default)}
+					/>
+					<div 
+						className='textoMobile'>
+						<h2>{Tittle}</h2>
+						<p>{Paragraph}</p>
+					</div>			
+				</a>
+		)}
+
+		const [esCelular, setEsCelular] = useState(false);
+
+  useEffect(() => {
+    // Buscamos palabras clave de sistemas operativos móviles
+    const detectarMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+    setEsCelular(detectarMovil);
+  }, []);
+
+	return esCelular ? <NovedadesMobile /> : <NovedadesWeb />;
 }
 
 export default Novedades
