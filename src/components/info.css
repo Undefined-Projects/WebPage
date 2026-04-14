@@ -1,0 +1,113 @@
+.contenedor-principal {
+  background-color: #1a1e26; /* Color de fondo oscuro */
+  color: white;
+  min-height: 100vh;
+  width: 100%;
+  padding: 60px 5%; /* Espacio arriba y a los lados */
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor-principal h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 2.5rem;
+}
+
+/* 2. Estructura de Filas */
+.fila {
+  display: flex;
+  align-items: stretch; /* Hace que el texto y la imagen tengan el mismo alto */
+  gap: 40px;
+  margin-bottom: 50px;
+  width: 100%;
+  max-width: 1200px; /* Ancho máximo para que no se estire demasiado en 4K */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 3. El Efecto Zig-Zag */
+.fila.inversa {
+  flex-direction: row-reverse;
+}
+
+/* 4. Tarjeta de Texto (Donde está el botón e info) */
+.columna-texto {
+  flex: 1;
+  background-color: #2a2f3b; /* Color de la tarjeta */
+  padding: 40px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra el contenido verticalmente */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  min-height: 300px; /* Evita que se vea recortada */
+}
+
+/* 5. Estilo del Botón (Título) */
+.columna-texto button {
+  background: none;
+  border: none;
+  color: #c792ea; /* Morado/Lavanda */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 20px;
+  transition: transform 0.2s ease;
+}
+
+.columna-texto button:hover {
+  transform: scale(1.02);
+  color: #d8a7f5;
+}
+
+/* 6. Párrafo que aparece (Contenido extendido) */
+.columna-texto p {
+  line-height: 1.6;
+  color: #cfd8dc;
+  font-size: 1.1rem;
+  margin: 0;
+  animation: fadeIn 0.4s ease; /* Animación suave al aparecer */
+}
+
+/* 7. Contenedor de Imagen */
+.columna-imagen {
+  flex: 1;
+  display: flex;
+}
+
+.cuadro-imagen {
+  width: 100%;
+  background-color: #3e4451; /* Color gris para cuando no hay foto */
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255,255,255,0.5);
+}
+
+/* Si usas etiquetas <img> reales dentro */
+.columna-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* 8. Animación de aparición */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 9. Responsivo: Para celulares se pone uno abajo del otro */
+@media (max-width: 850px) {
+  .fila, .fila.inversa {
+    flex-direction: column;
+  }
+  .columna-texto, .columna-imagen {
+    width: 100%;
+  }
+}

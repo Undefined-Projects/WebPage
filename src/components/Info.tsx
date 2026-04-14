@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './Info.css'; 
 
+
 function Info() {
   const [activo, setActivo] = useState<string | null>(null);
 
@@ -17,7 +18,9 @@ function Info() {
           {activo === 'pres' && <p>Como un espacio formado por y para jóvenes, en Undefined_Club entendemos que el aprendizaje es una aventura constante. Nos enfocamos en el desarrollo de competencias técnicas y blandas, creando un entorno donde los estudiantes pueden experimentar con nuevas herramientas, fallar sin miedo y adquirir las habilidades que el mundo laboral y la innovación tecnológica exigen actualmente.</p>}
         </div>
         <div className="columna-imagen">
-          <div className="cuadro-imagen">Imagen 1</div> 
+          <div className="cuadro-imagen"><video width="100%" height="100%" controls>
+            <source src="public/Images/video.mp4" type="video/mp4" />
+          </video></div> 
         </div>
       </div>
 
@@ -30,7 +33,7 @@ function Info() {
           {activo === 'prog' && <p>Undefined_Club es una comunidad de estudiantes apasionados por la tecnología, donde nuestro motor principal es el aprendizaje mutuo. Nos enfocamos en dominar la programación y el desarrollo web a través de la colaboración, compartiendo conocimientos para crecer juntos desde las bases hasta proyectos reales.</p>}
         </div>
         <div className="columna-imagen">
-          <div className="cuadro-imagen">Imagen 2</div>
+          <div className="cuadro-imagen"><img src="public/Images/programacion.jpeg" alt="" /></div>
         </div>
       </div>
 
@@ -43,7 +46,7 @@ function Info() {
           {activo === 'ases' && <p>Te ayudamos con tus ideas técnicas..Undefined_Club es un espacio abierto a mentes curiosas que buscan transformar una idea en un proyecto tangible. Aquí, no solo programamos, sino que ofrecemos un entorno de asesoramiento colectivo donde los estudiantes pueden aterrizar sus propuestas, recibir retroalimentación técnica y encontrar el apoyo necesario para dar vida a sus iniciativas digitales.</p>}
         </div>
         <div className="columna-imagen">
-          <div className="cuadro-imagen">Imagen 3</div>
+          <div className="cuadro-imagen"><img src="public/Images/Acesoramiento.jpeg" alt="" /></div>
         </div>
       </div>
 
@@ -58,7 +61,7 @@ function Info() {
           )}
         </div>
         <div className="columna-imagen">
-          <div className="cuadro-imagen">Imagen 4</div>
+          <div className="cuadro-imagen"><img src="public/Images/Convivencia.jpeg" alt="" /></div>
         </div>
       </div>
 
