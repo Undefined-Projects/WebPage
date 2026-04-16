@@ -24,13 +24,13 @@ function Novedades({Tittle, Paragraph, Img = Default, onNext, onPrev}: Novedades
 				<div className='button-container'>
 
 					<button className='swap' onClick={onPrev}>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke='#1E202C' stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke='#1E202C' strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 							<path d="M6 8L2 12L6 16" />
 							<path d="M2 12H22" />
 						</svg>
 					</button>
 					<button className='swap' onClick={onNext}>
-						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke='#1E202C' stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke='#1E202C' strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
 							<path d="M18 8L22 12L18 16" />
 							<path d="M2 12H22" />
 						</svg>

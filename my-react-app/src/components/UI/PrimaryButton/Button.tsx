@@ -71,15 +71,15 @@ function animateValue({ start = 0, end = 100, duration = 1000, delay = 0, ease =
 const PrimaryButton: React.FC<BorderGlowProps> = ({
   children,
   className = '',
-  edgeSensitivity = 30,
+  edgeSensitivity = 10,
   glowColor = '40 80 80',
   backgroundColor = '#060010',
   borderRadius = 28,
   glowRadius = 40,
   glowIntensity = 1.0,
-  coneSpread = 25,
-  animated = false,
-  colors = ['#c084fc', '#f472b6', '#38bdf8'],
+  coneSpread = 1,
+  animated = true,
+  colors = ['#1E202C', '#1E202C', '#1E202C'],
   fillOpacity = 0.5,
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
