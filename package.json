@@ -1,8 +1,20 @@
 {
   "name": "my-react-app",
-  "private": true,
   "version": "0.0.0",
+  "private": true,
+  "description": "Our Undefined_Club Web Page",
+  "homepage": "https://github.com/Undefined-Projects/WebPage#readme",
+  "bugs": {
+    "url": "https://github.com/Undefined-Projects/WebPage/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Undefined-Projects/WebPage.git"
+  },
+  "license": "ISC",
+  "author": "",
   "type": "module",
+  "main": "eslint.config.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

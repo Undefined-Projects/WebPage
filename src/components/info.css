@@ -17,13 +17,9 @@
 /* 2. Estructura de Filas */
 .fila {
   display: flex;
-  align-items: stretch; /* Hace que el texto y la imagen tengan el mismo alto */
-  gap: 40px;
-  margin-bottom: 50px;
-  width: 100%;
-  max-width: 1200px; /* Ancho máximo para que no se estire demasiado en 4K */
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center; /* Hace que el texto y la imagen tengan el mismo alto */
+  gap: 60px;
+  margin-bottom: 100px;
 }
 
 /* 3. El Efecto Zig-Zag */
@@ -35,31 +31,32 @@
 .columna-texto {
   flex: 1;
   background-color: #2a2f3b; /* Color de la tarjeta */
-  padding: 40px;
+  padding: 0;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Centra el contenido verticalmente */
+  justify-content: flex-start; /* Centra el contenido verticalmente */
   box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-  min-height: 300px; /* Evita que se vea recortada */
+  overflow: hidden;
+  transition: all 0.3 ease;
 }
 
 /* 5. Estilo del Botón (Título) */
 .columna-texto button {
-  background: none;
   border: none;
-  color: #c792ea; /* Morado/Lavanda */
+  color: FFFFF; 
+  background-color: 6A73FF;
   font-size: 1.8rem;
   font-weight: bold;
-  text-align: left;
+  text-align: center;
   cursor: pointer;
-  padding: 0;
-  margin-bottom: 20px;
-  transition: transform 0.2s ease;
+  padding: 25px 30px;
+  margin-bottom: 0;
+  width: 100%;
+  transition: background 0.3s ease;
 }
 
 .columna-texto button:hover {
-  transform: scale(1.02);
   color: #d8a7f5;
 }
 
@@ -69,31 +66,51 @@
   color: #cfd8dc;
   font-size: 1.1rem;
   margin: 0;
+  padding: 30px;
   animation: fadeIn 0.4s ease; /* Animación suave al aparecer */
 }
 
 /* 7. Contenedor de Imagen */
 .columna-imagen {
-  flex: 1;
+ flex: 0.8; 
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .cuadro-imagen {
   width: 100%;
-  background-color: #3e4451; /* Color gris para cuando no hay foto */
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: rgba(255,255,255,0.5);
+  max-width: 350px;
+  aspect-ratio: 4/5;
+border-radius: 20px;
+  overflow: hidden; /* Esto asegura que el video respete las curvas */
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4); /* Le da profundidad */
+  background-color: #2a2f3b;
 }
 
 /* Si usas etiquetas <img> reales dentro */
-.columna-imagen img {
+.columna-imagen img, 
+.columna-imagen video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
+  object-fit: cover; /* Recorta el exceso para no deformar */
+display: block;
+}
+
+.boton-activo {
+  background-color: #55589c !important;
+}
+
+.columna-texto button:active {
+  color: 6A73FF;
+  transform: scale(0.96);
+  transition: transform 0.1s;
+}
+
+.tarjeta-activa {
+  outline: 2px solid #55589c;
+  box-shadow: 0 0 20px rgba(85, 88, 156, 0.3);
 }
 
 /* 8. Animación de aparición */

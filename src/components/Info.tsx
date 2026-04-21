@@ -40,10 +40,11 @@ function Info() {
       {/* BLOQUE 3: Asesoramiento */}
       <div className="fila">
         <div className="columna-texto">
+          <div className={`columna-texto ${activo === 'ases' ? 'tarjeta-activa' : ''}`}></div>
           <button onClick={() => setActivo(activo === 'ases' ? null : 'ases')}>
             Asesoramiento de proyectos
           </button>
-          {activo === 'ases' && <p>Te ayudamos con tus ideas técnicas..Undefined_Club es un espacio abierto a mentes curiosas que buscan transformar una idea en un proyecto tangible. Aquí, no solo programamos, sino que ofrecemos un entorno de asesoramiento colectivo donde los estudiantes pueden aterrizar sus propuestas, recibir retroalimentación técnica y encontrar el apoyo necesario para dar vida a sus iniciativas digitales.</p>}
+          {activo === 'ases' && <p>Te ayudamos con tus ideas técnicas. Undefined_Club es un espacio abierto a mentes curiosas que buscan transformar una idea en un proyecto tangible. Aquí, no solo programamos, sino que ofrecemos un entorno de asesoramiento colectivo donde los estudiantes pueden aterrizar sus propuestas, recibir retroalimentación técnica y encontrar el apoyo necesario para dar vida a sus iniciativas digitales.</p>}
         </div>
         <div className="columna-imagen">
           <div className="cuadro-imagen"><img src="public/Images/Acesoramiento.jpeg" alt="" /></div>
